@@ -175,6 +175,8 @@ let foods = [
 // CODE HERE
 let riceFood = foods.filter(element => element.tags.includes("rice")).reduce((riceFood, element) => riceFood + element.price, 0)
 console.log(riceFood)
+console.log(foods)
 
 // THE TOTAL
 
+// 36
