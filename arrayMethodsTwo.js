@@ -11,6 +11,8 @@ let numbers = [40, 68, 14, 90, 49];
 
 // CODE HERE
 
+numbers.forEach((element) => console.log(element/2))
+
 
 ////////// PROBLEM 2 //////////
 
@@ -23,6 +25,9 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
+let newNumbers = numbers.map((element) => element/2)
+console.log(newNumbers)
+
 
 
 ////////// PROBLEM 3 //////////
@@ -51,6 +56,8 @@ let cities = [
 
 // CODE HERE
 
+let newCities = cities.filter(element => element.endsWith(`i`))
+console.log(newCities)
 
 ////////// PROBLEM 4 //////////
 
@@ -80,13 +87,29 @@ let fruits = [
 // ***** Do not edit the code above *****
 
 /* 
-    Using forEach method, identify each element of the 'fruits' array above if it's an apple or orange by its color. If the color is red, print "The fruit with index [THE ELEMENT'S INDEX] is an apple." If the color is orange, print "The fruit with index [THE ELEMENT INDEX] is an orange." If the color is not red or apple, print "The fruit with index [THE ELEMENT'S INDEX] is neither apple or orange."
+    Using forEach method, identify each element of the 'fruits' array above if it's an apple or orange by its color. 
+    If the color is red, print "The fruit with index [THE ELEMENT'S INDEX] is an apple." 
+    If the color is orange, print "The fruit with index [THE ELEMENT INDEX] is an orange." 
+    If the color is not red or apple, print "The fruit with index [THE ELEMENT'S INDEX] is neither apple or orange."
 
     Note: do a google search on how to find an element's index of an array in Javascript. There is a built-in Javascript method that would help you find an index of an element in an array.
 */
 
 // CODE HERE
 
+fruits.forEach((element, index) => {
+    if(element.color == "red"){
+      console.log(`The fruit with index ${index} is an apple.`)
+
+    }
+    else if(element.color == "orange"){
+      console.log(`The fruit with index ${index} is an orange.`)
+    }
+    else{
+      console.log(`The fruit with index ${index} is neither apple or orange.`)
+    }
+  }
+)
 
 
 /* 
@@ -100,6 +123,11 @@ let fruits = [
 */
 
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
+
+// The fruit with index 0 is neither apple or orange.
+// The fruit with index 1 is an orange.
+// The fruit with index 2 is neither apple or orange.
+// The fruit with index 3 is an apple.
 
 
 
@@ -145,7 +173,8 @@ let foods = [
 */
 
 // CODE HERE
-
+let riceFood = foods.filter(element => element.tags.includes("rice")).reduce((riceFood, element) => riceFood + element.price, 0)
+console.log(riceFood)
 
 // THE TOTAL
 
