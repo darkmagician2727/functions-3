@@ -100,7 +100,6 @@ let fruits = [
 fruits.forEach((element, index) => {
     if(element.color == "red"){
       console.log(`The fruit with index ${index} is an apple.`)
-
     }
     else if(element.color == "orange"){
       console.log(`The fruit with index ${index} is an orange.`)
