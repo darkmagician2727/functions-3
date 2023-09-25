@@ -127,9 +127,9 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 
 // CODE HERE
 
-const bobPurchases = purchases.filter(element => element.owner == `Bob`)
-bobPurchasesTotal = bobPurchases.reduce((bobPurchasesTotal, element) => bobPurchasesTotal + element.price, 0) 
-console.log(bobPurchasesTotal)
+// const bobPurchases = purchases.filter(element => element.owner == `Bob`)
+// bobPurchasesTotal = bobPurchases.reduce((bobPurchasesTotal, element) => bobPurchasesTotal + element.price, 0) 
+// console.log(bobPurchasesTotal)
 
-// const bobPurchases = purchases.filter(element => element.owner == `Bob`).reduce((bobPurchasesTotal, element) => bobPurchasesTotal + element.price, 0) 
-// console.log(bobPurchases)
+const bobPurchases = purchases.filter(element => element.owner == `Bob`).reduce((bobPurchasesTotal, element) => bobPurchasesTotal + element.price, 0) 
+console.log(bobPurchases)
